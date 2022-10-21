@@ -1,8 +1,8 @@
 galaxy_info:
-  author: your name
+  role_name: zsh_role
+  author: Lorenzo Bettini
   namespace: lorenzobettini
-  description: your role description
-  company: your company (optional)
+  description: Install ZSH and set it as the user's shell
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
