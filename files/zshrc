@@ -1,0 +1,17 @@
+autoload -Uz compinit
+compinit
+
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd beep extendedglob nomatch notify
+bindkey -e
+
+alias grep='grep --color=auto'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias l='ls -lah'
+alias la='ls -lAh'
+alias mv='mv -i'
+alias rm='rm -i'

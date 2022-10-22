@@ -11,3 +11,9 @@
   ansible.builtin.user:
     name: "{{ ansible_user_id }}"
     shell: /bin/zsh
+
+- name: Copy zshrc
+  ansible.builtin.copy:
+    src: zshrc
+    dest: ~/.zshrc
+    mode: 0644
