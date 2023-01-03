@@ -10,6 +10,8 @@
       set -o pipefail && \
       grep -E "^{{ ansible_user_id }}:" /etc/passwd | awk -F: '{ print $7 }'
     register: user_shell
+    args:
+      executable: /bin/bash
     changed_when: false
 
   - name: Assert shell is zsh

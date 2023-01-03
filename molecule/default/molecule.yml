@@ -9,7 +9,7 @@ lint: |
   ansible-lint
 platforms:
   - name: instance
-    image: fedora:36
+    image: ${MOLECULE_DISTRO:-fedora:36}
     pre_build_image: true
 provisioner:
   name: ansible
