@@ -1,13 +1,13 @@
 ---
 # tasks file for zsh_role
 - name: Install ZSH
-  become: yes
+  become: true
   ansible.builtin.package:
     name: zsh
     state: present
 
 - name: Change user shell to zsh 
-  become: yes
+  become: true
   ansible.builtin.user:
     name: "{{ ansible_user_id }}"
     shell: /bin/zsh
