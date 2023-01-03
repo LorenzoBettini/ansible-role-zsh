@@ -13,5 +13,6 @@ platforms:
     pre_build_image: true
 provisioner:
   name: ansible
-verifier:
-  name: ansible
+  playbooks:
+    converge: ../shared/converge.yml
+    verify: ../shared/verify.yml
