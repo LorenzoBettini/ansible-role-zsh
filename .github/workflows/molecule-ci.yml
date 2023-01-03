@@ -19,6 +19,7 @@ jobs:
         scenario:
           - default
           - ubuntu
+          - arch
 
     steps:
       - name: Check out the codebase.

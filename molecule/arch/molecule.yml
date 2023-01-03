@@ -1,0 +1,20 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+lint: |
+  set -e
+  yamllint .
+  ansible-lint
+platforms:
+  - name: instance-arch
+    image: arch-ansible
+    platform: linux/amd64
+    dockerfile: ./Dockerfile
+    build_image: true
+provisioner:
+  name: ansible
+  playbooks:
+    converge: ../shared/converge.yml
+    verify: ../shared/verify.yml
