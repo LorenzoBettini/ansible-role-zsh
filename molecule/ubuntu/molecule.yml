@@ -8,8 +8,8 @@ lint: |
   yamllint .
   ansible-lint
 platforms:
-  - name: instance
-    image: fedora:36
+  - name: instance-ubuntu
+    image: ubuntu:jammy
     pre_build_image: true
 provisioner:
   name: ansible

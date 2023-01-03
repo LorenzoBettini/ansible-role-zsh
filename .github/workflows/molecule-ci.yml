@@ -16,9 +16,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        playbookdistro:
-          - fedora:36
-          - ubuntu:jammy
+        scenario:
+          - default
+          - ubuntu
 
     steps:
       - name: Check out the codebase.
@@ -33,8 +33,7 @@ jobs:
         run: pip install -r pip/requirements.txt
 
       - name: Run Molecule tests.
-        run: molecule test
+        run: molecule test -s ${{ matrix.scenario }}
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
-          MOLECULE_DISTRO: ${{ matrix.playbookdistro }}

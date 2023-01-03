@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include lorenzobettini.zsh_role"
+      ansible.builtin.include_role:
+        name: "lorenzobettini.zsh_role"
