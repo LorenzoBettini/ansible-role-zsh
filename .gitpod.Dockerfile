@@ -1,4 +1,4 @@
-FROM gitpod/workspace-python:2023-01-02-17-16-30
+FROM gitpod/workspace-python-3.9:2023-01-16-03-31-28
 
 RUN pip install --upgrade pip
 RUN pip install ansible "molecule[docker]" yamllint ansible-lint
