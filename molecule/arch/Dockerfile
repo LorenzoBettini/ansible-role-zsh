@@ -1,6 +1,7 @@
 FROM archlinux:latest
 LABEL maintainer="Lorenzo Bettini"
 
-RUN pacman -Sy --noconfirm --needed python sudo
+# -u is crucial to avoid partial updates and inconsistent libraries
+RUN pacman -Syu --noconfirm --needed python sudo
 
 CMD ["/bin/sh"]
